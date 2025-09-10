@@ -8,7 +8,7 @@ export default async function CategoriaPage({ params }: { params: Promise<{ cate
   const cat = categoria as Category;
   const events = [...institutionalEvents, ...personalEvents].filter((e) => e.category === cat);
   return (
-    <div className="grid gap-6">
+    <div className="grid gap-6 min-h-screen">
       <h1 className="text-2xl font-semibold capitalize">{cat}</h1>
       <CalendarView events={events} />
     </div>
