@@ -1,26 +1,124 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --radius: 0.625rem;
+  /* Base palette */
+  --background: #FCFFE7; /* beige claro */
+  --foreground: #2B3467; /* texto */
+  --card: #FCFFE7;
+  --card-foreground: #2B3467;
+  --popover: #FCFFE7;
+  --popover-foreground: #2B3467;
+  --primary: #2B3467; /* azul oscuro */
+  --primary-foreground: #FCFFE7; /* contraste sobre primary */
+  --secondary: #EB455F; /* rojo */
+  --secondary-foreground: #FCFFE7;
+  --muted: #F3F6DC; /* suave derivado del fondo */
+  --muted-foreground: #3b467f;
+  --accent: #BAD7E9; /* azul claro */
+  --accent-foreground: #2B3467;
+  --destructive: #EB455F;
+  --border: #E6E9D1;
+  --input: #E6E9D1;
+  --ring: #2B3467;
+  /* Misc tokens kept for components that reference them */
+  --chart-1: #2B3467;
+  --chart-2: #EB455F;
+  --chart-3: #BAD7E9;
+  --chart-4: #7aa7bf;
+  --chart-5: #4b5a94;
+  --sidebar: #FCFFE7;
+  --sidebar-foreground: #2B3467;
+  --sidebar-primary: #2B3467;
+  --sidebar-primary-foreground: #FCFFE7;
+  --sidebar-accent: #BAD7E9;
+  --sidebar-accent-foreground: #2B3467;
+  --sidebar-border: #E6E9D1;
+  --sidebar-ring: #2B3467;
+}
+
+.dark {
+  --background: #2B3467;
+  --foreground: #FCFFE7;
+  --card: #2B3467;
+  --card-foreground: #FCFFE7;
+  --popover: #2B3467;
+  --popover-foreground: #FCFFE7;
+  --primary: #BAD7E9;
+  --primary-foreground: #2B3467;
+  --secondary: #EB455F;
+  --secondary-foreground: #FCFFE7;
+  --muted: #253057;
+  --muted-foreground: #BAD7E9;
+  --accent: #BAD7E9;
+  --accent-foreground: #2B3467;
+  --destructive: #EB455F;
+  --border: #3a457a;
+  --input: #3a457a;
+  --ring: #BAD7E9;
+  --chart-1: #BAD7E9;
+  --chart-2: #EB455F;
+  --chart-3: #8fbcd3;
+  --chart-4: #FCFFE7;
+  --chart-5: #4b5a94;
+  --sidebar: #2B3467;
+  --sidebar-foreground: #FCFFE7;
+  --sidebar-primary: #BAD7E9;
+  --sidebar-primary-foreground: #2B3467;
+  --sidebar-accent: #8fbcd3;
+  --sidebar-accent-foreground: #2B3467;
+  --sidebar-border: #3a457a;
+  --sidebar-ring: #BAD7E9;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    @apply bg-background text-foreground;
+  }
 }

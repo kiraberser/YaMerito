@@ -1,0 +1,6 @@
+export {default as Hero } from './Hero'
+export {default as Features } from './Features'
+export {default as InstitutionalCalendar } from './InstitutionalCalendar'
+export {default as SmartReminders } from './SmartReminders'
+export {default as Pricing } from './Pricing'
+export {default as Cta } from './Cta'
