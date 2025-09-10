@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "YaMerito",
+  title: "YaMerito | Asistente de recuerdos y recordatorios inteligentes",
   description: "Asistente de recuerdos y recordatorios inteligentes - Tec de Veracruz",
 };
 
@@ -28,7 +28,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <div className="min-h-screen grid grid-rows-[auto,1fr]">
           <Navbar/>
-          <main className="mx-auto w-full max-w-6xl p-4 sm:p-6 md:p-8">{children}</main>
+          <main className="bg-background">{children}</main>
           <Footer/>
         </div>
       </body>
