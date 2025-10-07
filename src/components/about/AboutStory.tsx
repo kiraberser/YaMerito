@@ -35,7 +35,7 @@ export default function AboutStory() {
                 con el calendario institucional y hasta información del clima local.
               </p>
               <p className="text-primary font-medium">
-                "Ya merito" - esa frase tan mexicana que usamos cuando algo está por suceder,
+                &quot;Ya merito&quot; - esa frase tan mexicana que usamos cuando algo está por suceder,
                 se convirtió en la inspiración perfecta para nuestra app.
               </p>
             </div>

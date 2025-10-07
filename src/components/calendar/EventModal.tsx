@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Calendar, Clock, Tag, MapPin, Edit2, Trash2, Save, X } from "lucide-react";
@@ -174,9 +174,9 @@ export default function EventModal({ isOpen, onClose, event, onUpdate, onDelete 
                     Editar
                   </Button>
                   <Button
-                    variant="destructive"
+                    variant="outline"
                     onClick={handleDelete}
-                    className="w-full sm:w-auto"
+                    className="w-full sm:w-auto text-red-600 hover:text-red-700 hover:bg-red-50 border-red-200"
                   >
                     <Trash2 className="w-4 h-4 mr-2" />
                     Eliminar

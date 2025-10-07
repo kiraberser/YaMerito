@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { GraduationCap, Users, Home, Trophy, Building2 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import type { Category } from "@/lib/types";
 
 interface CalendarFiltersProps {
   activeFilters: string[];
