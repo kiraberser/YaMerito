@@ -13,22 +13,24 @@ export default function Features() {
   ];
 
   return (
-    <section className="px-4 py-20 ">
-      <div className="container mx-auto max-w-6xl">
+    <section id="features" className="px-4 py-16 sm:py-20 lg:py-24">
+      <div className="container mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Organiza cada aspecto de tu vida</h2>
-          <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+            Organiza cada aspecto de tu vida
+          </h2>
+          <p className="text-base sm:text-lg lg:text-xl text-foreground/70 max-w-2xl mx-auto px-4">
             YaMerito te ayuda a mantener el control de todas tus actividades importantes
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {items.map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -36,17 +38,20 @@ export default function Features() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05, y: -5 }}
+              className="h-full"
             >
-              <Card className="h-full border-0 shadow-lg hover:shadow-xl transition-shadow">
-                <CardHeader className="text-center">
-                  <div className={`w-16 h-16 mx-auto rounded-full ${feature.bg} flex items-center justify-center mb-4`}>
-                    <feature.icon className={`w-8 h-8 ${feature.color}`} />
+              <Card className="h-full border-2 border-border/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:border-primary/30">
+                <CardHeader className="text-center pb-4">
+                  <div className={`w-16 h-16 sm:w-20 sm:h-20 mx-auto rounded-2xl ${feature.bg} flex items-center justify-center mb-4 transition-transform group-hover:scale-110`}>
+                    <feature.icon className={`w-8 h-8 sm:w-10 sm:h-10 ${feature.color}`} />
                   </div>
-                  <CardTitle className="text-foreground">{feature.title}</CardTitle>
+                  <CardTitle className="text-foreground text-xl sm:text-2xl">{feature.title}</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-center text-foreground/70">{feature.description}</CardDescription>
+                <CardContent className="pb-6">
+                  <CardDescription className="text-center text-foreground/70 text-sm sm:text-base">
+                    {feature.description}
+                  </CardDescription>
                 </CardContent>
               </Card>
             </motion.div>
