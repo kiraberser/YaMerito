@@ -25,7 +25,7 @@ export default function Pricing() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {/* Básico */}
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} viewport={{ once: true }}>
-            <Card className="h-full border-2 border-gray-200 hover:border-accent transition-colors">
+            <Card className="h-full border-2 border-gray-200 hover:border-accent transition-colors bg-white">
               <CardHeader className="text-center pb-8">
                 <CardTitle className="text-2xl text-foreground mb-2">Básico</CardTitle>
                 <div className="text-4xl font-bold text-foreground mb-2">Gratis</div>
@@ -49,8 +49,8 @@ export default function Pricing() {
 
           {/* Estudiante */}
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} viewport={{ once: true }}>
-            <Card className="h-full border-2 border-secondary relative overflow-hidden">
-              <div className="absolute top-0 right-0 bg-secondary text-secondary-foreground px-3 py-1 text-sm font-medium">Más popular</div>
+            <Card className="h-full border-2 border-secondary relative overflow-hidden bg-white">
+              <div className="absolute top-0 right-0 bg-white text-secondary-foreground px-3 py-1 text-sm font-medium">Más popular</div>
               <CardHeader className="text-center pb-8">
                 <CardTitle className="text-2xl text-foreground mb-2">Estudiante</CardTitle>
                 <div className="text-4xl font-bold text-foreground mb-2">

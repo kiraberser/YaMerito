@@ -10,25 +10,25 @@ const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
     return (
-        <nav className="bg-white/95 backdrop-blur-sm border-b border-[#2B3467]/10 sticky top-0 z-50" aria-label="Navegación principal">
+        <nav className="bg-primary text-white backdrop-blur-sm border-b border-[#2B3467]/10 sticky top-0 z-50" aria-label="Navegación principal">
             <div className="container mx-auto max-w-6xl px-4">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
                     <div className="flex items-center">
-                        <Link href="/" className="text-2xl font-bold text-[#2B3467] hover:text-[#EB455F] transition-colors">
+                        <Link href="/" className="text-2xl font-bold text-white hover:text-[#EB455F] transition-colors">
                             YaMerito
                         </Link>
                     </div>
 
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center gap-8">
-                        <Link href="/categorias" className="text-[#2B3467] hover:text-[#EB455F] transition-colors font-medium">
+                        <Link href="/categorias" className="text-white hover:text-[#EB455F] transition-colors font-medium">
                             Categorías
                         </Link>
-                        <Link href="/calendario" className="text-[#2B3467] hover:text-[#EB455F] transition-colors font-medium">
+                        <Link href="/calendario" className="text-white hover:text-[#EB455F] transition-colors font-medium">
                             Calendario
                         </Link>
-                        <Link href="/recordatorios" className="text-[#2B3467] hover:text-[#EB455F] transition-colors font-medium">
+                        <Link href="/recordatorios" className="text-white hover:text-[#EB455F] transition-colors font-medium">
                             Recordatorios
                         </Link>
                         <Button asChild className="bg-[#EB455F] hover:bg-[#EB455F]/90 text-white">

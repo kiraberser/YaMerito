@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className=" px-4 py-4 bg-background">
+    <section className=" px-4 py-4 ">
       <div className="container mx-auto max-w-6xl h-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-full">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
