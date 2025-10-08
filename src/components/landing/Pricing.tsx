@@ -77,7 +77,7 @@ export default function Pricing() {
               <CardHeader className="text-center pb-6 sm:pb-8 pt-6 sm:pt-8">
                 <CardTitle className="text-xl sm:text-2xl text-foreground mb-2">Estudiante</CardTitle>
                 <div className="text-4xl sm:text-5xl font-bold text-foreground mb-2">
-                  $49<span className="text-base sm:text-lg font-normal text-foreground/60">/mes</span>
+                  $69<span className="text-base sm:text-lg font-normal text-foreground/60">/mes</span>
                 </div>
                 <CardDescription className="text-sm sm:text-base">Para estudiantes activos</CardDescription>
               </CardHeader>
